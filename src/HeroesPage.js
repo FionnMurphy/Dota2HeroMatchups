@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import {getAllHeroes, getHeroCounters} from './services/Heroes';
 
 const HeroesList = ({heroes, setSelectedHero}) => {
-    console.log('rendering heroes list')
+    console.log('Rendering heroes list')
     const list = heroes.map(hero => (
         <tr key={hero.id}>
             <td>{hero.id}</td>
@@ -42,7 +42,7 @@ const getIndexOfHeroId = (id) =>{
 }
 
 const HeroCounters = ({heroID, heroes, counters, setCounters, role}) => {
-    console.log('rendering counters list')
+    console.log('Rendering counters list')
     useEffect(()=>{
         getHeroCounters(heroID).then(
             res => {
